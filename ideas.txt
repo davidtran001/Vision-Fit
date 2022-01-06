@@ -1,0 +1,4 @@
+AI WORKOUT APPLICATION
+- track angle of joints depending on exercise
+- user can select workout
+- rest timer begins once x amount of successful reps
