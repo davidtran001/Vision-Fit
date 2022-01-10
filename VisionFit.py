@@ -24,7 +24,7 @@ rest_flag = False
 title_flag = True
 
 workout = ex.workout()
-
+#test
 while True:
     success, frame = cap.read()
     #frame = pm.rescale_frame(frame, 50)
