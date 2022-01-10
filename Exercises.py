@@ -32,6 +32,16 @@ class workout():
         angle = detector.findAngle(frame, 11, 13, 15, True)
         # Right Arm
         # angle = detector.findAngle(frame, 12, 14, 16, True)
-        per = np.interp(angle,(70,140),(0,100))
+        per = np.interp(angle,(75,140),(0,100))
         bar = np.interp(angle, (60,150), (30,400))
         return angle, per, bar, exerciseName
+    
+    def chinUp(self, frame, detector, rep_count, dir):
+        angle = 0
+        exerciseName = 'Chin Up'
+        chin_pos = detector.lmList[9][2]
+        per = np.interp(chin_pos,(100,240),(0,100))
+        bar = np.interp(chin_pos, (100,240), (30,400))
+        
+        #print(per)
+        return  angle, per, bar, exerciseName
